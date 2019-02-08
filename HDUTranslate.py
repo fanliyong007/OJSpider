@@ -20,13 +20,8 @@ def trans_baidu(src):
         return dst
     except:
         print()
-def trans_google(src):
-    url="https://translate.google.cn/#view=home&op=translate&sl=auto&tl=zh-CN&text="+str(src)
-    browser.get(url)
-    dst=browser.find_element_by_class_name("tlid-translation translation")
-    return dst.text
 worddict={}
-for i in range(1000,1010):
+for i in range(1000,1090):
     try:
         website = "http://acm.hdu.edu.cn/showproblem.php?pid=" + str(i)
         browser.get(website)
@@ -57,5 +52,5 @@ worddict=sorted(worddict.items(),key=lambda d: d[1],reverse = True)
 for i in worddict:
     if i[1] > 2:
         print(i)
-        print("英文"+i[0]+" 中文翻译："+trans_google(i[0])+" 出现次数"+str(i[1]))
+        print("英文"+i[0]+" 中文翻译："+trans_baidu(i[0])+" 出现次数"+str(i[1]))
 browser.quit()

@@ -2,7 +2,13 @@ from selenium import webdriver
 import json
 import urllib.request as urllib
 import hashlib
-browser = webdriver.Chrome()
+import mysql.connector
+# 打开数据库连接
+conn = mysql.connector.connect(user='root', password='123456', database='hdu')
+cursor = conn.cursor()
+option = webdriver.ChromeOptions()
+option.add_argument("headless")
+browser = webdriver.Chrome(chrome_options=option)
 def trans_baidu(src):
     appid = "20181225000252033"  # 百度开发者apikey
     salt="520176"
@@ -21,7 +27,7 @@ def trans_baidu(src):
     except:
         print()
 worddict={}
-for i in range(1000,1090):
+for i in range(1000,6460):
     try:
         website = "http://acm.hdu.edu.cn/showproblem.php?pid=" + str(i)
         browser.get(website)
@@ -46,11 +52,18 @@ for i in range(1000,1090):
                 worddict[word] = 1
             elif len(word) > 3:
                 worddict[word] = worddict[word] + 1
+        print(i)
     except:
         print("not have question "+str(i))
 worddict=sorted(worddict.items(),key=lambda d: d[1],reverse = True)
 for i in worddict:
     if i[1] > 2:
-        print(i)
-        print("英文"+i[0]+" 中文翻译："+trans_baidu(i[0])+" 出现次数"+str(i[1]))
+        try:
+            translate=trans_baidu(i[0])
+            cursor.execute('insert into word values (%s,%s,%s)', [i[0], translate, i[1]])
+            conn.commit()
+        except:
+            print("Internet error")
+conn.commit()
+conn.close()
 browser.quit()

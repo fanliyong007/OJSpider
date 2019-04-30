@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f686cb-85af-4c6f-9b92-d2a6a32799db" name="Default" comment="v1.0.0">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HDUSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/HDUSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HDUTranslate.py" beforeDir="false" afterPath="$PROJECT_DIR$/HDUTranslate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxpy.pkl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,11 +72,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HDUSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="48" column="16" lean-forward="true" selection-end-line="59" selection-end-column="14" />
+            <state relative-caret-position="167">
+              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
               <folding>
-                <element signature="e#17#26#0" expanded="true" />
-                <marker date="1556624086749" expanded="true" signature="1089:1243" ph="..." />
+                <element signature="e#17#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -311,7 +307,7 @@
       <workItem from="1555844091947" duration="1209000" />
       <workItem from="1556203690366" duration="262000" />
       <workItem from="1556447704386" duration="2534000" />
-      <workItem from="1556598228696" duration="10947000" />
+      <workItem from="1556598228696" duration="12373000" />
     </task>
     <task id="LOCAL-00001" summary="v1.0.0">
       <created>1549693098776</created>
@@ -324,7 +320,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48314000" />
+    <option name="totallyTimeSpent" value="49740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,7 +409,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Spider$testPy.coverage" NAME="testPy Coverage Results" MODIFIED="1556455439129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../hduspider/src/main/resources/Spider" />
-    <SUITE FILE_PATH="coverage/Spider$HDUSpider.coverage" NAME="HDUSpider Coverage Results" MODIFIED="1556624086766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spider$HDUSpider.coverage" NAME="HDUSpider Coverage Results" MODIFIED="1556625594856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spider$HDUTranslate.coverage" NAME="HDUTranslate Coverage Results" MODIFIED="1556452656268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -491,11 +487,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HDUSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="48" column="16" lean-forward="true" selection-end-line="59" selection-end-column="14" />
+        <state relative-caret-position="167">
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
           <folding>
-            <element signature="e#17#26#0" expanded="true" />
-            <marker date="1556624086749" expanded="true" signature="1089:1243" ph="..." />
+            <element signature="e#17#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

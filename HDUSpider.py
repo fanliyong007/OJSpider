@@ -1,9 +1,6 @@
 # coding = utf-8
-import re
-import os
-import shutil
+import os,sys
 import zipfile
-from os.path import join, getsize
 from selenium import webdriver
 Myque=[]
 option = webdriver.ChromeOptions()
@@ -19,10 +16,13 @@ def zip_file(src_dir):
             z.write(os.path.join(dirpath, filename),fpath+filename)
             print ('==压缩成功==')
     z.close()
-# username=input("")#读入账户
-# # userpass=input("")#读入密码
-username="fanliyong007"
-userpass="fanliyong8880+"
+def removeFileInFirstDir(targetDir):
+    for file in os.listdir(targetDir):
+        targetFile = os.path.join(targetDir,  file)
+        if os.path.isfile(targetFile):
+            os.remove(targetFile)
+username=input()#读入账户
+userpass=input()#读入密码
 browser.get("http://acm.hdu.edu.cn/status.php?user="+username)#取得当前用户题目集
 browser.find_element_by_name("username").send_keys(username)
 browser.find_element_by_name("userpass").send_keys(userpass)
@@ -52,9 +52,11 @@ for quePath in Myque:
     code = browser.find_element_by_xpath("/html/body/table/tbody/tr[4]/td/div/div[2]/pre")
     queNum=browser.find_element_by_xpath("/html/body/table/tbody/tr[4]/td/div/div[1]/b/font/a[1]").text
     print(code.text)
-    f=open('D:\\Spider\\tmp\\'+queNum.replace('==',' equals ').replace('?'," wen "),'w')
+    filename=sys.path[0]+"\\tmp\\"+queNum.replace('==',' equals ').replace('?'," wen ")
+    f=open(filename,'w')
     f.write(code.text)
     f.close()
 browser.close()
-zip_file("D:\\Spider\\tmp")
+zip_file(sys.path[0]+"\\tmp")
+removeFileInFirstDir(sys.path[0]+"\\tmp")
 browser.quit()
